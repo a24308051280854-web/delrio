@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="es-MX" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portal del Ayudante · Tiendas Del Río</title>
+<meta name="description" content="Portal de inducción para ayudantes de tienda: manual interactivo, simulador de caja con IVA 8%, checklist de turno, examen de certificación y solicitud de empleo. Contenido de ejemplo para práctica.">
+<meta name="theme-color" content="#0B53CA">
+<meta property="og:title" content="Portal del Ayudante · Tiendas Del Río">
+<meta property="og:description" content="Manual, simulador de caja, checklist de turno y examen de certificación para ayudantes.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230B53CA'/%3E%3Cpath d='M16 4l3.2 7.2 7.8.8-5.9 5.2 1.7 7.7L16 20.9 9.2 24.9l1.7-7.7L5 12l7.8-.8z' fill='%23FFD700'/%3E%3C/svg%3E">
+<script src="theme-init.js"></script>
+<script type="application/ld+json">
+{ "@context": "https://schema.org", "@type": "WebApplication", "name": "Portal del Ayudante · Tiendas Del Río", "applicationCategory": "EducationalApplication", "inLanguage": "es-MX", "description": "Portal de inducción con manual interactivo, simulador de caja, checklist de turno y examen de certificación. Contenido de ejemplo para práctica." }
+</script>
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<!-- Iconos -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8M5 10v10h14V10M10 20v-6h4v6"/></symbol>
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M5 4h10a3 3 0 013 3v13H8a3 3 0 01-3-3zM5 17a3 3 0 013-3h10"/></symbol>
+    <symbol id="i-pos" viewBox="0 0 24 24"><path d="M6 3h12v18l-2-1.5L14 21l-2-1.5L10 21l-2-1.5L6 21zM9 8h6M9 12h6M9 16h3"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M9 11l3 3 8-8M20 12v7a2 2 0 01-2 2H6a2 2 0 01-2-2V7a2 2 0 012-2h9"/></symbol>
+    <symbol id="i-cert" viewBox="0 0 24 24"><path d="M12 15a6 6 0 100-12 6 6 0 000 12zM8.5 14l-1.5 7 5-3 5 3-1.5-7"/></symbol>
+    <symbol id="i-form" viewBox="0 0 24 24"><path d="M5 3h10l4 4v14H5zM9 12h6M9 16h6M9 8h2"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><path d="M11 18a7 7 0 100-14 7 7 0 000 14zM21 21l-5-5"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><path d="M12 17a5 5 0 100-10 5 5 0 000 10zM12 1v3M12 20v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M1 12h3M20 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M21 13a9 9 0 11-10-10 7 7 0 0010 10z"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><path d="M12 3l10 18H2zM12 10v5M12 18h.01"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><path d="M9 9h11v11H9zM5 15V4h11"/></symbol>
+    <symbol id="i-chev" viewBox="0 0 24 24"><path d="M6 9l6 6 6-6"/></symbol>
+    <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12l5 5 9-10"/></symbol>
+    <symbol id="i-reset" viewBox="0 0 24 24"><path d="M20 11a8 8 0 10-2.3 6M20 4v7h-7"/></symbol>
+    <symbol id="i-day" viewBox="0 0 24 24"><path d="M12 17a5 5 0 100-10 5 5 0 000 10zM12 1v3M12 20v3M1 12h3M20 12h3"/></symbol>
+    <!-- Placa del sheriff reutilizable -->
+    <symbol id="badge" viewBox="0 0 64 64">
+      <path d="M32 3l6.2 12.6 13.9-2-4.6 13.4L60 32l-12.500 5 4.600 13.400-13.900-2L32 61l-6.200-12.600-13.900 2L16.500 37 4 32l12.500-5-4.600-13.400 13.900 2z" fill="#FFD700" stroke="#8A6A00" stroke-width="1.5" stroke-linejoin="round"/>
+      <g fill="#FFC700" stroke="#8A6A00" stroke-width="1"><circle cx="32" cy="3" r="2.6"/><circle cx="60" cy="32" r="2.6"/><circle cx="32" cy="61" r="2.6"/><circle cx="4" cy="32" r="2.6"/><circle cx="51.500" cy="12.500" r="2.400"/><circle cx="12.500" cy="12.500" r="2.400"/><circle cx="51.500" cy="51.500" r="2.400"/><circle cx="12.500" cy="51.500" r="2.400"/></g>
+      <circle cx="32" cy="32" r="14" fill="#0B53CA" stroke="#8A6A00" stroke-width="1.5"/>
+      <text x="32" y="37.500" text-anchor="middle" font-family="Georgia,serif" font-weight="800" font-size="15" fill="#FFD700">DR</text>
+    </symbol>
+  </defs>
+</svg>
+
+<!-- ============================ HEADER ============================ -->
+<header class="site-header">
+  <div class="wrap header-row">
+    <a class="brand" href="#dashboard" data-tab-link="dashboard" aria-label="Tiendas Del Río, ir al inicio">
+      <svg viewBox="0 0 64 64" aria-hidden="true"><use href="#badge"/></svg>
+      <span><strong>Tiendas Del Río</strong><small>Portal del Ayudante</small></span>
+    </a>
+
+    <nav class="tabs" role="tablist" aria-label="Módulos del portal" id="tablist">
+      <button class="tab" role="tab" id="tab-dashboard" data-tab="dashboard" aria-controls="panel-dashboard" aria-selected="true"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg>Dashboard</button>
+      <button class="tab" role="tab" id="tab-manual" data-tab="manual" aria-controls="panel-manual" aria-selected="false" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Manual</button>
+      <button class="tab" role="tab" id="tab-pos" data-tab="pos" aria-controls="panel-pos" aria-selected="false" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-pos"/></svg>Caja POS</button>
+      <button class="tab" role="tab" id="tab-checklist" data-tab="checklist" aria-controls="panel-checklist" aria-selected="false" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Checklist</button>
+      <button class="tab" role="tab" id="tab-examen" data-tab="examen" aria-controls="panel-examen" aria-selected="false" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-cert"/></svg>Examen</button>
+      <button class="tab" role="tab" id="tab-solicitud" data-tab="solicitud" aria-controls="panel-solicitud" aria-selected="false" tabindex="-1"><svg class="ic" aria-hidden="true"><use href="#i-form"/></svg>Solicitud</button>
+      <span class="tab-indicator" aria-hidden="true"></span>
+    </nav>
+
+    <div class="tools">
+      <button class="icon-btn theme-btn" id="themeBtn" type="button" aria-pressed="false" aria-label="Modo noche">
+        <svg class="ic sun" aria-hidden="true"><use href="#i-sun"/></svg><svg class="ic moon" aria-hidden="true"><use href="#i-moon"/></svg>
+      </button>
+      <div class="profile">
+        <button class="icon-btn avatar-btn" id="profileBtn" type="button" aria-expanded="false" aria-controls="profilePop" aria-label="Abrir perfil del ayudante">
+          <div class="mascot-avatar-badge" aria-hidden="true">
+            <svg viewBox="0 0 64 64">
+              <path d="M15 56c-4-10 1-19 17-19s21 9 17 19c-3 6-10 8-17 8s-14-2-17-8z" fill="#0B53CA"/>
+              <circle cx="32" cy="27" r="18" fill="#0B53CA"/>
+              <ellipse cx="32" cy="30" rx="13" ry="11" fill="#F8FAFC"/>
+              <circle cx="27" cy="26" r="2.5" fill="#0F172A"/><circle cx="37" cy="26" r="2.5" fill="#0F172A"/>
+              <path d="M28 33q4-3 8 0 0 7-4 9-4-2-4-9z" fill="#0F172A"/>
+              <ellipse cx="32" cy="10" rx="25" ry="5" fill="#5D4037"/>
+              <path d="M19 10c0-9 5-12 13-12s13 3 13 12z" fill="#5D4037"/>
+              <path d="M32 3l2 4 5 .5-3.5 3 1 5-4.5-2.5-4.5 2.5 1-5-3.5-3 5-.5z" fill="#FFD700"/>
+              <path d="M20 45l24 0-12 12z" fill="#D32F2F"/>
+            </svg>
+          </div>
+        </button>
+        <div class="pop glass" id="profilePop" hidden>
+          <p><strong>Ayudante invitado</strong></p>
+          <p class="faint">Tu avance se guarda solo en este navegador. No hay cuentas ni datos personales.</p>
+          <p style="margin:.6rem 0 .3rem;font-weight:700">Avance del turno: <span id="popPct">0%</span></p>
+          <div class="bar" aria-hidden="true"><i id="popBar"></i></div>
+          <button class="btn btn-ghost btn-sm" id="wipeBtn" type="button" style="margin-top:.8rem"><svg class="ic" aria-hidden="true"><use href="#i-trash"/></svg>Borrar mis datos</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main id="contenido" tabindex="-1">
+  <div class="wrap" id="panelStage">
+
+    <!-- ============================ 1. DASHBOARD ============================ -->
+    <section class="panel" id="panel-dashboard" role="tabpanel" aria-labelledby="tab-dashboard" tabindex="0">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="hero-kicker">Formación de ayudantes <span aria-hidden="true">·</span> Tiendas Del Río</p>
+          <p class="level-pill"><svg class="ic" aria-hidden="true"><use href="#badge"/></svg><span id="levelName">Ayudante Novato</span></p>
+          <h1 id="greet">¡Listo para tu primer <span class="hero-underline">turno!<svg viewBox="0 0 240 16" aria-hidden="true" focusable="false"><path pathLength="1" d="M5 10.5C52 3 95 5 134 8s70 5 101-2"/></svg></span></h1>
+          <script src="intro.js"></script>
+          <p class="lead">Este es tu portal de inducción: conoce la tienda, practica la caja y prepárate para atender con confianza. El Guacamayo Sheriff te acompaña desde el primer día.</p>
+          <div class="hero-actions">
+            <button class="btn btn-red" type="button" data-tab-link="checklist"><svg class="ic" aria-hidden="true"><use href="#i-check"/></svg>Empezar mi inducción</button>
+            <button class="btn btn-ghost" type="button" data-tab-link="manual"><svg class="ic" aria-hidden="true"><use href="#i-book"/></svg>Consultar el manual</button>
+          </div>
+          <div class="global" role="group" aria-label="Progreso global de la inducción">
+            <div class="row"><span>Mi progreso de inducción</span><b id="globalPct">0%</b></div>
+            <div class="bar" role="progressbar" aria-label="Progreso global" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="globalBar"><i></i></div>
+            <p class="parts" id="globalParts"><span>Checklist: <b>0%</b></span><span>Manual: <b>0%</b></span><span>Caja: <b>0%</b></span><span>Examen: <b>0%</b></span></p>
+          </div>
+        </div>
+        <div class="mascot mascot-hero-card" aria-label="El Guacamayo Sheriff te da la bienvenida">
+          <!-- Placeholder SVG integrado: puede sustituirse por el arte oficial autorizado. -->
+          <div id="mascotSlot">
+            <span class="mascot-shadow" aria-hidden="true"></span>
+            <img class="mascot-img" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 140 150'%3E%3Cpath d='M26 112c-6-24 8-40 44-40s50 16 44 40c-4 16-20 24-44 24s-40-8-44-24z' fill='%230B53CA'/%3E%3Cpath d='M44 98c4-12 14-18 26-18s22 6 26 18c2 14-6 32-26 32s-28-18-26-32z' fill='%23FFC700'/%3E%3Ccircle cx='70' cy='64' r='34' fill='%230B53CA'/%3E%3Cellipse cx='70' cy='68' rx='25' ry='21' fill='%23F8FAFC'/%3E%3Ccircle cx='58' cy='62' r='6' fill='%230F172A'/%3E%3Ccircle cx='82' cy='62' r='6' fill='%230F172A'/%3E%3Cpath d='M54 76q16-6 32 0 0 18-16 26-16-8-16-26z' fill='%230F172A'/%3E%3Cpath d='M40 104h60l-30 30z' fill='%23D32F2F'/%3E%3Cellipse cx='70' cy='34' rx='52' ry='10' fill='%235D4037'/%3E%3Cpath d='M42 34c0-24 12-30 28-30s28 6 28 30z' fill='%235D4037'/%3E%3Crect x='42' y='26' width='56' height='7' fill='%23FFC700'/%3E%3Cpath d='M70 8l3 7 7 1-5 5 1 7-6-4-6 4 1-7-5-5 7-1z' fill='%23FFD700'/%3E%3C/svg%3E" alt="Mascota Sheriff Del Rio">
+          </div>
+          <div class="bubble" role="status" aria-live="polite" aria-atomic="true"><p id="tipText">Cargando consejo…</p><small>Consejo del Sheriff</small></div>
+        </div>
+      </div>
+
+      <div class="quick" id="quick"></div>
+    </section>
+
+    <!-- ============================ 2. MANUAL ============================ -->
+    <section class="panel" id="panel-manual" role="tabpanel" aria-labelledby="tab-manual" tabindex="0" hidden>
+      <header class="panel-head reveal">
+        <h2 class="section-title">Manual interactivo del ayudante</h2>
+        <p class="section-lede">Busca por palabra o abre cada tema. Atención al cliente, rotación PEPS, limpieza y recepción de proveedores.</p>
+      </header>
+      <p class="notice reveal"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span><strong>Contenido de ejemplo para práctica.</strong> Resume buenas prácticas generales de tienda; no es política oficial de Del Río hasta que RH u Operación lo validen. Si algo no está aquí, consulta a tu supervisor.</span></p>
+      <div class="manual-layout">
+        <aside class="manual-sidebar" aria-label="Categorías del manual">
+          <h3>Temas</h3>
+          <div class="cats" id="cats" role="group" aria-label="Filtrar por tema"></div>
+        </aside>
+        <div class="manual-results">
+          <div class="toolbar">
+            <div class="search" role="search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="manualQ">Buscar en el manual</label><input class="input" id="manualQ" type="search" placeholder="Buscar: caducidad, queja, piso mojado…" autocomplete="off"></div>
+            <button class="btn btn-ghost btn-sm" id="expandAll" type="button">Abrir todo</button>
+            <button class="btn btn-ghost btn-sm" id="collapseAll" type="button">Cerrar todo</button>
+          </div>
+          <p class="result-count" id="manualCount" role="status" aria-live="polite"></p>
+          <div class="acc" id="acc"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ 3. SIMULADOR POS ============================ -->
+    <section class="panel" id="panel-pos" role="tabpanel" aria-labelledby="tab-pos" tabindex="0" hidden>
+      <header class="panel-head reveal">
+        <h2 class="section-title">Simulador de caja POS</h2>
+        <p class="section-lede">Practica el cobro: agrega productos, revisa el IVA del 8% de zona fronteriza, recibe efectivo y entrega el cambio exacto.</p>
+      </header>
+      <p class="notice reveal"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span><strong>Simulación de práctica.</strong> No registra ventas reales ni toca la caja de la tienda. Productos y precios de ejemplo (antes de IVA).</span></p>
+      <div class="pos" style="margin-top:1rem">
+        <div>
+          <div class="toolbar" style="margin-bottom:.6rem">
+            <div class="search" role="search"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><label class="sr-only" for="prodQ">Buscar producto</label><input class="input" id="prodQ" type="search" placeholder="Buscar producto…" autocomplete="off"></div>
+          </div>
+          <div class="cats" id="prodCats" role="group" aria-label="Filtrar productos por categoría"></div>
+          <p class="result-count" id="prodCount" role="status" aria-live="polite" style="margin-top:.7rem"></p>
+          <div class="products" id="products"></div>
+        </div>
+
+        <aside class="ticket glass stitch" aria-label="Ticket de venta">
+          <h3>Ticket · Caja de práctica</h3>
+          <div class="lines" id="lines" aria-live="polite"></div>
+          <div class="totals" aria-label="Totales">
+            <div><span>Subtotal</span><span id="tSub">$0.00</span></div>
+            <div><span>IVA 8 %</span><span id="tIva">$0.00</span></div>
+            <div class="grand"><span>Total</span><span id="tTotal">$0.00</span></div>
+          </div>
+          <div class="cash">
+            <label for="cash">Efectivo recibido</label>
+            <input class="input mono" id="cash" inputmode="decimal" autocomplete="off" placeholder="0.00" aria-describedby="cashState">
+            <div class="quick-cash" id="quickCash" role="group" aria-label="Billetes rápidos"></div>
+            <p class="cash-state" id="cashState" role="status" aria-live="polite"></p>
+            <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+              <button class="btn btn-red" id="charge" type="button">Cobrar</button>
+              <button class="btn btn-ghost" id="clearCart" type="button"><svg class="ic" aria-hidden="true"><use href="#i-trash"/></svg>Vaciar</button>
+            </div>
+          </div>
+          <div class="change" id="change" hidden></div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================ 4. CHECKLIST ============================ -->
+    <section class="panel" id="panel-checklist" role="tabpanel" aria-labelledby="tab-checklist" tabindex="0" hidden>
+      <header class="panel-head reveal">
+        <h2 class="section-title">Checklist de turno</h2>
+        <p class="section-lede">Marca cada tarea al terminarla. Tu avance se queda guardado en este navegador y se reinicia cada día.</p>
+      </header>
+      <div class="shift-switch glass" role="group" aria-label="Turno" id="shiftSwitch">
+        <button type="button" data-shift="dia" aria-pressed="true"><svg class="ic" aria-hidden="true"><use href="#i-day"/></svg>Turno diurno</button>
+        <button type="button" data-shift="noche" aria-pressed="false"><svg class="ic" aria-hidden="true"><use href="#i-moon"/></svg>Turno nocturno</button>
+      </div>
+      <div class="check-grid">
+        <div class="tasks" id="tasks" role="group" aria-label="Tareas del turno"></div>
+        <aside class="stat glass" aria-label="Avance">
+          <p class="faint">Avance de este turno</p>
+          <div class="progress-ring" role="progressbar" aria-label="Avance del turno seleccionado" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="shiftBar"><span class="big" id="shiftPct">0%</span></div>
+          <div class="two">
+            <div><span>Diurno <b id="dayPct">0%</b></span><div class="bar"><i id="dayBar"></i></div></div>
+            <div><span>Nocturno <b id="nightPct">0%</b></span><div class="bar"><i id="nightBar"></i></div></div>
+          </div>
+          <button class="btn btn-ghost btn-sm" id="resetChecklist" type="button"><svg class="ic" aria-hidden="true"><use href="#i-reset"/></svg>Reiniciar lista</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================ 5. EXAMEN ============================ -->
+    <section class="panel" id="panel-examen" role="tabpanel" aria-labelledby="tab-examen" tabindex="0" hidden>
+      <header class="panel-head reveal">
+        <h2 class="section-title">Examen de certificación</h2>
+        <p class="section-lede">Tres preguntas sobre el manual. Con 2 aciertos o más obtienes la insignia «Ayudante Certificado».</p>
+      </header>
+      <p class="notice reveal"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>El examen es solo para aprender. No se usa para decisiones de contratación ni de desempeño.</span></p>
+      <form class="exam" id="exam" novalidate style="margin-top:1rem"></form>
+    </section>
+
+    <!-- ============================ 6. SOLICITUD ============================ -->
+    <section class="panel" id="panel-solicitud" role="tabpanel" aria-labelledby="tab-solicitud" tabindex="0" hidden>
+      <header class="panel-head reveal">
+        <h2 class="section-title">Solicitud de empleo · Ayudante</h2>
+        <p class="section-lede">Llena el formulario para la vacante de Ayudante. Revisamos tus campos mientras escribes.</p>
+      </header>
+      <p class="notice reveal"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span><strong>Demostración.</strong> Esta pantalla no envía ni guarda lo que escribes; el folio se genera solo en tu navegador. Las sucursales y horarios son de ejemplo.</span></p>
+      <div class="form-grid" style="margin-top:1rem">
+        <form class="form glass" id="jobForm" novalidate aria-labelledby="tab-solicitud">
+          <section class="form-section full" aria-labelledby="formDatosTitle">
+            <h3 id="formDatosTitle">Datos personales</h3>
+            <div class="form-section-grid">
+              <div class="field full" data-f="nombre"><label for="f-nombre">Nombre completo</label><input class="input" id="f-nombre" name="nombre" autocomplete="name" maxlength="60" required aria-describedby="h-nombre"><span class="hint" id="h-nombre">Nombre y apellido.</span></div>
+              <div class="field" data-f="tel"><label for="f-tel">Teléfono (10 dígitos)</label><input class="input" id="f-tel" name="tel" inputmode="tel" autocomplete="tel" maxlength="16" required aria-describedby="h-tel"><span class="hint" id="h-tel">Solo números.</span></div>
+              <div class="field" data-f="correo"><label for="f-correo">Correo</label><input class="input" id="f-correo" name="correo" type="email" autocomplete="email" maxlength="80" required aria-describedby="h-correo"><span class="hint" id="h-correo">Ejemplo: nombre@correo.com</span></div>
+            </div>
+          </section>
+          <section class="form-section full" aria-labelledby="formPreferenciasTitle">
+            <h3 id="formPreferenciasTitle">Preferencias de trabajo</h3>
+            <div class="form-section-grid">
+              <div class="field" data-f="sucursal"><label for="f-sucursal">Sucursal de interés</label>
+                <select class="select" id="f-sucursal" name="sucursal" required aria-describedby="h-sucursal"><option value="">Elige una sucursal</option><option>Sucursal Centro (ejemplo)</option><option>Sucursal Norte (ejemplo)</option><option>Sucursal Sur (ejemplo)</option><option>Sucursal Oriente (ejemplo)</option></select><span class="hint" id="h-sucursal">Elige la más cercana a tu casa.</span></div>
+              <div class="field" data-f="exp"><label for="f-exp">Experiencia en tienda</label>
+                <select class="select" id="f-exp" name="exp" required aria-describedby="h-exp"><option value="">Elige una opción</option><option>Sin experiencia</option><option>Menos de 1 año</option><option>1 año o más</option></select><span class="hint" id="h-exp">Si no tienes, también puedes aplicar.</span></div>
+              <fieldset class="field full" data-f="horario" aria-describedby="h-horario"><legend class="lbl">Horario preferido</legend>
+                <div class="shifts" id="shiftOpts"></div><span class="hint" id="h-horario">Elige un horario.</span></fieldset>
+              <div class="field full" data-f="msg"><label for="f-msg">Cuéntanos algo de ti (opcional)</label><textarea class="textarea" id="f-msg" name="msg" maxlength="280" aria-describedby="h-msg"></textarea><span class="hint" id="h-msg">0 de 280 caracteres.</span></div>
+            </div>
+          </section>
+          <section class="form-section full" aria-labelledby="formAvisoTitle">
+            <h3 id="formAvisoTitle">Aviso</h3>
+            <div class="field" data-f="aviso"><label class="agree"><input type="checkbox" id="f-aviso" name="aviso" required aria-describedby="h-aviso"><span>Entiendo que es una demostración y que no se envía mi información.</span></label><span class="hint" id="h-aviso"></span></div>
+          </section>
+          <div class="full" style="display:flex;flex-wrap:wrap;gap:.7rem;align-items:center"><button class="btn btn-red" type="submit">Enviar solicitud</button><button class="btn btn-ghost" type="reset" id="resetForm">Limpiar</button><span class="faint" id="formMsg" role="status" aria-live="polite"></span></div>
+        </form>
+        <aside class="side-note glass stitch">
+          <h3>Antes de enviar</h3>
+          <ul><li>Usa un teléfono y correo donde sí te localicen.</li><li>Un folio de esta demostración no significa que ya estés en proceso real.</li><li>No escribas contraseñas ni datos bancarios.</li></ul>
+          <p class="faint">Con la versión real, Recursos Humanos te contactaría para siguientes pasos.</p>
+        </aside>
+      </div>
+    </section>
+
+    <section class="styleguide wrap" id="styleguide" aria-labelledby="styleguideTitle" hidden>
+      <header class="styleguide-intro">
+        <p class="hero-kicker">Sistema visual · Del Río</p>
+        <h1 id="styleguideTitle">Página de estilos</h1>
+        <p class="section-lede">Muestrario interno de componentes y estados. Ruta directa: <code>#/estilos</code>.</p>
+      </header>
+      <div class="styleguide-grid">
+        <article class="styleguide-card glass">
+          <h2>Botones</h2>
+          <div class="styleguide-states">
+            <div class="styleguide-state"><small>Default</small><button class="btn btn-red" type="button">Primario</button><button class="btn btn-blue" type="button">Secundario</button><button class="btn btn-ghost" type="button">Fantasma</button></div>
+            <div class="styleguide-state"><small>Hover · focus-visible · active</small><button class="btn btn-red demo-hover" type="button">Hover</button><button class="btn btn-blue demo-focus" type="button">Focus</button><button class="btn btn-ghost demo-active" type="button">Active</button></div>
+            <div class="styleguide-state"><small>Disabled · loading · error</small><button class="btn btn-red demo-disabled" type="button" disabled>Deshabilitado</button><button class="btn btn-blue demo-loading" type="button" aria-busy="true">Cargando</button><button class="btn is-error" type="button" aria-invalid="true">Error</button></div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Chips</h2>
+          <div class="styleguide-states">
+            <div class="styleguide-state"><small>Default · hover · seleccionado</small><button class="chip" type="button">Todos</button><button class="chip demo-hover" type="button">Hover</button><button class="chip" type="button" aria-pressed="true">PEPS</button></div>
+            <div class="styleguide-state"><small>Focus-visible · active · disabled · loading · error</small><button class="chip demo-focus" type="button">Focus</button><button class="chip demo-active" type="button">Active</button><button class="chip demo-disabled" type="button" disabled>Disabled</button><button class="chip demo-loading" type="button" aria-busy="true">Loading</button><button class="chip demo-error" type="button" aria-invalid="true">Error</button></div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Tarjetas</h2>
+          <div class="styleguide-states">
+            <div class="styleguide-state"><small>Reposo · hover · activa</small><div class="demo-card glass">Elevación de reposo</div><div class="demo-card glass demo-hover">Elevación hover</div><div class="demo-card glass demo-active">Elevación activa</div></div>
+            <div class="styleguide-state"><small>Focus-visible · disabled · loading · error</small><button class="demo-card glass demo-focus" type="button">Focus</button><div class="demo-card glass demo-disabled" aria-disabled="true">Deshabilitada</div><div class="demo-card glass demo-loading" aria-busy="true">Cargando</div><div class="demo-card glass demo-error" aria-invalid="true">Error</div></div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Campos</h2>
+          <div class="styleguide-states">
+            <div class="styleguide-state"><small>Default · hover · focus-visible · selector · área de texto</small><div class="field demo-field"><label for="sg-name">Nombre</label><input class="input" id="sg-name" placeholder=" "><span class="hint">Escribe tu nombre.</span></div><div class="field demo-field"><label for="sg-hover">Hover</label><input class="input demo-hover" id="sg-hover" placeholder=" "></div><div class="field demo-field"><label for="sg-focus">Focus</label><input class="input demo-focus" id="sg-focus" placeholder=" "></div><div class="field demo-field"><label for="sg-select">Sucursal</label><select class="select" id="sg-select"><option>Centro</option><option>Norte</option></select></div><div class="field demo-field"><label for="sg-textarea">Comentario</label><textarea class="textarea" id="sg-textarea"></textarea></div></div>
+            <div class="styleguide-state"><small>Active · success · disabled · loading · error</small><div class="field demo-field"><label for="sg-active">Active</label><input class="input demo-active" id="sg-active" placeholder=" " value="Del Río"></div><div class="field demo-field" data-state="ok"><label for="sg-success">Válido</label><input class="input" id="sg-success" value="Nombre correcto"><span class="hint"><svg class="ic hint-icon" role="img" aria-label="Correcto"><use href="#i-ok"/></svg><span>El campo es válido.</span></span></div><div class="field demo-field"><label for="sg-disabled">Disabled</label><input class="input" id="sg-disabled" disabled value="No editable"></div><div class="field demo-field demo-loading"><label for="sg-loading">Loading</label><input class="input" id="sg-loading" aria-busy="true" placeholder=" "></div><div class="field demo-field" data-state="bad"><label for="sg-error">Correo</label><input class="input" id="sg-error" aria-invalid="true" aria-describedby="sg-error-hint" value="correo-no-valido"><span class="hint" id="sg-error-hint"><svg class="ic hint-icon" role="img" aria-label="Error"><use href="#i-alert"/></svg><span>Escribe un correo válido.</span></span></div></div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Acordeón</h2>
+          <div class="styleguide-states">
+            <div class="acc-item"><button class="acc-btn demo-hover" type="button" aria-expanded="false"><span class="ttl">Default / hover</span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></div>
+            <div class="acc-item open"><button class="acc-btn demo-focus" type="button" aria-expanded="true"><span class="ttl">Abierto · focus-visible</span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button><div class="acc-body">Panel abierto con borde activo.</div></div>
+            <div class="acc-item"><button class="acc-btn demo-active" type="button" aria-expanded="false"><span class="ttl">Active</span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></div>
+            <div class="acc-item"><button class="acc-btn demo-disabled" type="button" disabled><span class="ttl">Disabled</span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></div>
+            <div class="acc-item"><button class="acc-btn demo-loading" type="button" aria-busy="true"><span class="ttl">Loading</span><svg class="ic chev" aria-hidden="true"><use href="#i-chev"/></svg></button></div>
+            <div class="acc-item" data-state="bad"><button class="acc-btn" type="button" aria-invalid="true"><span class="ttl">Error</span><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg></button></div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Tabs</h2>
+          <div class="styleguide-states">
+            <div class="styleguide-state" role="tablist" aria-label="Estados de tabs">
+              <button class="tab" type="button" role="tab" aria-selected="false">Default</button>
+              <button class="tab demo-hover" type="button" role="tab" aria-selected="false">Hover</button>
+              <button class="tab demo-focus" type="button" role="tab" aria-selected="true">Active</button>
+              <button class="tab demo-disabled" type="button" role="tab" aria-disabled="true">Disabled</button>
+              <button class="tab demo-loading" type="button" role="tab" aria-busy="true">Loading</button>
+              <button class="tab demo-error" type="button" role="tab" aria-invalid="true">Error</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Toasts</h2>
+          <div class="styleguide-states">
+            <div class="toast" tabindex="0"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Default</span></div>
+            <div class="toast demo-hover" tabindex="0"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Hover</span></div>
+            <div class="toast demo-focus" tabindex="0"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Focus-visible</span></div>
+            <div class="toast demo-active" tabindex="0"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Active</span></div>
+            <div class="toast ok"><svg class="ic" aria-hidden="true"><use href="#i-ok"/></svg><span>Acción completada.</span></div>
+            <div class="toast bad" role="alert" aria-live="assertive"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Error · Revisa los datos.</span></div>
+            <div class="toast demo-disabled"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Estado deshabilitado.</span></div>
+            <div class="toast demo-loading" aria-busy="true"><svg class="ic" aria-hidden="true"><use href="#i-alert"/></svg><span>Procesando notificación.</span></div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Modal</h2>
+          <div class="styleguide-states">
+            <div class="modal-preview glass" role="group" aria-label="Vista previa del modal">
+              <div class="modal-head"><svg class="ic ic-24" aria-hidden="true"><use href="#badge"/></svg><h3>Confirmar acción</h3></div>
+              <div class="modal-body"><p>El diálogo conserva jerarquía y foco visible.</p></div>
+              <div class="modal-foot"><button class="btn btn-ghost" type="button">Cancelar</button><button class="btn btn-red" type="button">Confirmar</button></div>
+            </div>
+            <div class="modal-preview glass demo-hover" aria-label="Modal en hover"><div class="modal-body">Hover</div></div>
+            <div class="modal-preview glass demo-focus" tabindex="0"><div class="modal-body">Focus-visible</div></div>
+            <div class="modal-preview glass demo-active"><div class="modal-body">Active</div><div class="modal-foot"><button class="btn btn-ghost demo-disabled" type="button" disabled>Disabled</button></div></div>
+            <div class="modal-preview glass demo-disabled" aria-disabled="true"><div class="modal-body">Modal deshabilitado</div></div>
+            <div class="modal-preview glass demo-loading" aria-busy="true"><div class="modal-body">Procesando…</div></div>
+            <div class="modal-preview glass demo-error" data-state="bad"><div class="modal-body"><svg class="ic" role="img" aria-label="Error"><use href="#i-alert"/></svg> Estado de error del modal.</div></div>
+          </div>
+        </article>
+
+        <article class="styleguide-card glass">
+          <h2>Barras de progreso</h2>
+          <div class="styleguide-states">
+            <div class="bar" role="progressbar" aria-label="Progreso en reposo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="42" style="--v:.42"><i></i></div>
+            <div class="bar demo-hover" role="progressbar" aria-label="Progreso hover" aria-valuemin="0" aria-valuemax="100" aria-valuenow="68" style="--v:.68"><i></i></div>
+            <div class="bar demo-focus" role="progressbar" aria-label="Progreso focus" aria-valuemin="0" aria-valuemax="100" aria-valuenow="82" style="--v:.82"><i></i></div>
+            <div class="bar demo-active" role="progressbar" aria-label="Progreso activo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="76" style="--v:.76"><i></i></div>
+            <div class="bar demo-disabled" role="progressbar" aria-label="Progreso deshabilitado" aria-disabled="true" aria-valuemin="0" aria-valuemax="100" aria-valuenow="20" style="--v:.2"><i></i></div>
+            <div class="bar" role="progressbar" aria-label="Progreso cargando" aria-busy="true" aria-valuemin="0" aria-valuemax="100" aria-valuenow="55" style="--v:.55"><i></i></div>
+            <div class="bar" role="progressbar" aria-label="Progreso con error" aria-invalid="true" aria-valuemin="0" aria-valuemax="100" aria-valuenow="12" style="--v:.12"><i></i></div>
+          </div>
+        </article>
+      </div>
+    </section>
+  </div>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand"><svg viewBox="0 0 64 64" aria-hidden="true"><use href="#badge"/></svg>Tiendas Del Río</div>
+        <p>Portal de inducción para ayudantes. Prototipo educativo del reto Hack Knights IA Challenge 2026.</p>
+      </div>
+      <div>
+        <h2>Recursos Humanos</h2>
+        <ul>
+          <li>Línea de RH: 000 000 0000 <span class="faint">(dato de ejemplo)</span></li>
+          <li>Correo: rh@ejemplo.com.mx <span class="faint">(dato de ejemplo)</span></li>
+          <li>Horario de atención: lunes a viernes, 9:00 a 17:00 <span class="faint">(ejemplo)</span></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Ir a</h2>
+        <ul>
+          <li><a class="fl" href="#manual" data-tab-link="manual">Manual interactivo</a></li>
+          <li><a class="fl" href="#pos" data-tab-link="pos">Simulador de caja</a></li>
+          <li><a class="fl" href="#checklist" data-tab-link="checklist">Checklist de turno</a></li>
+          <li><a class="fl" href="#examen" data-tab-link="examen">Examen de certificación</a></li>
+          <li><a class="fl" href="#solicitud" data-tab-link="solicitud">Solicitud de empleo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h2>Estado</h2>
+        <ul class="mono" style="font-size:.88rem">
+          <li><span id="netDot" style="display:inline-block;width:9px;height:9px;border-radius:50%;background:#5EE3A1;margin-right:.5rem"></span><span id="netTxt">En línea</span></li>
+          <li>Datos guardados: <span id="savedTxt">solo en este navegador</span></li>
+          <li>Hora local: <time id="clock">—</time></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom"><span>© <span id="year">2026</span> Tiendas Del Río. Todos los derechos reservados.</span><span>Contenido de ejemplo; no representa políticas oficiales.</span></div>
+  </div>
+</footer>
+
+<dialog id="modal" aria-labelledby="modalTitle"></dialog>
+<div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+<p class="sr-only" id="live" role="status" aria-live="polite"></p>
+
+<script src="app.js" defer></script>
+</body>
+</html>
